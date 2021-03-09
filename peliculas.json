@@ -1,7 +1,7 @@
 {
 	"peliculas":[
 		{
-			"idPelicula" : "1",
+			"idPelicula" : 0,
 			"tituloPelicula" : "Braveheart",
 			"anioEstreno" : "1995",
 			"genero": {
@@ -20,11 +20,11 @@
 				{
 					"idActor" : 3,
 					"nombreActor" : "Angus Macfadyen"
-				},
+				}
 			]
 		},
 		{
-			"idPelicula" : "2",
+			"idPelicula" : 1,
 			"tituloPelicula" : "Gladiator",
 			"anioEstreno" : "2000",
 			"genero": {
@@ -43,11 +43,11 @@
 				{
 					"idActor" : 6,
 					"nombreActor" : "Connie Nielsen"
-				},
+				}
 			]
 		},
 		{
-			"idPelicula" : "3",
+			"idPelicula" : 2,
 			"tituloPelicula" : "The Shining",
 			"anioEstreno" : "1980",
 			"genero": {
@@ -66,11 +66,11 @@
 				{
 					"idActor" : 9,
 					"nombreActor" : "Dany Lloyd"
-				},
+				}
 			]
 		},
 		{
-			"idPelicula" : "4",
+			"idPelicula" : 3,
 			"tituloPelicula" : "Life is beautiful",
 			"anioEstreno" : "1997",
 			"genero": {
@@ -85,12 +85,12 @@
 				{
 					"idActor" : 11,
 					"nombreActor" : "Giorgio Cantarini"
-				},
+				}
 				
 			]
 		},
 		{
-			"idPelicula" : "5",
+			"idPelicula" : 4,
 			"tituloPelicula" : "The Hangover",
 			"anioEstreno" : "2009",
 			"genero": {
@@ -105,12 +105,12 @@
 				{
 					"idActor" : 13,
 					"nombreActor" : "Zach Galifiana"
-				},
+				}
 				
 			]
 		},
 		{
-			"idPelicula" : "6",
+			"idPelicula" : 5,
 			"tituloPelicula" : "Rocky",
 			"anioEstreno" : "1976",
 			"genero": {
@@ -129,12 +129,12 @@
 				{
 					"idActor" : 16,
 					"nombreActor" : "Burt Young"
-				},
+				}
 				
 			]
 		},
 		{
-			"idPelicula" : "7",
+			"idPelicula" : 6,
 			"tituloPelicula" : "Fight Club",
 			"anioEstreno" : "1999",
 			"genero": {
@@ -149,11 +149,11 @@
 				{
 					"idActor" : 18,
 					"nombreActor" : "Edward Norton"
-				},							
+				}
 			]
 		},
 		{
-			"idPelicula" : "8",
+			"idPelicula" : 7,
 			"tituloPelicula" : "The Dark Knight Rises",
 			"anioEstreno" : "2012",
 			"genero": {
@@ -168,11 +168,11 @@
 				{
 					"idActor" : 20,
 					"nombreActor" : "Anne Hathaway"
-				},								
+				}
 			]
 		},
 		{
-			"idPelicula" : "9",
+			"idPelicula" : 8,
 			"tituloPelicula" : "Scarface",
 			"anioEstreno" : "1983",
 			"genero": {
@@ -187,11 +187,11 @@
 				{
 					"idActor" : 22,
 					"nombreActor" : "Michelle Pfeiffer"
-				},								
+				}
 			]
 		},
 		{
-			"idPelicula" : "10",
+			"idPelicula" : 9,
 			"tituloPelicula" : "The Wolf of Wall Street",
 			"anioEstreno" : "2013",
 			"genero": {
@@ -206,9 +206,47 @@
 				{
 					"idActor" : 24,
 					"nombreActor" : "Jordan Belfort"
-				},								
+				}
 			]
 		},
+		{
+			"idPelicula" : 10,
+			"tituloPelicula" : "Rambo First Blood",
+			"anioEstreno" : "1982",
+			"genero": {
+				"idGenero" : 5,
+				"nombreGenero" : "Acción"
+			},
+			"actores":[
+				{
+					"idActor" : 14,
+					"nombreActor" : "Silvester Stallone"
+				},
+				{
+					"idActor" : 25,
+					"nombreActor" : "Richard Crenna"
+				}
+			]
+		},
+		{
+			"idPelicula" : 11,
+			"tituloPelicula" : "Seven",
+			"anioEstreno" : "1995",
+			"genero": {
+				"idGenero" : 6,
+				"nombreGenero" : "Suspenso"
+			},
+			"actores":[
+				{
+					"idActor" : 17 ,
+					"nombreActor" : "Brat Pitt"
+				},
+				{
+					"idActor" : 26,
+					"nombreActor" : "Morgan Freeman"
+				}
+			]
+		}
 
 	]
 }
