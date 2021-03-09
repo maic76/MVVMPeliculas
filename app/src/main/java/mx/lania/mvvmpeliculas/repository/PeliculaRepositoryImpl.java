@@ -14,7 +14,7 @@ public class PeliculaRepositoryImpl implements PeliculaRepository {
     private DAOPelicula daoPelicula;
 
     @Inject
-    PeliculaRepositoryImpl(DAOPelicula daoPersona) {
+    PeliculaRepositoryImpl(DAOPelicula daoPelicula) {
         this.daoPelicula = daoPelicula;
     }
 

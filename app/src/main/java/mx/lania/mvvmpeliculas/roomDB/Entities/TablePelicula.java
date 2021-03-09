@@ -16,6 +16,9 @@ public class TablePelicula {
     @ColumnInfo(name="anioEstreno")
     private int anioEstreno;
 
+    @ColumnInfo(name="idGenero")
+    private int idGenero;
+
     public int getIdPelicula() {
         return idPelicula;
     }
@@ -30,6 +33,14 @@ public class TablePelicula {
 
     public void setTituloPelicula(String tituloPelicula) {
         this.tituloPelicula = tituloPelicula;
+    }
+
+    public int getIdGenero() {
+        return idGenero;
+    }
+
+    public void setIdGenero(int idGenero) {
+        this.idGenero = idGenero;
     }
 
     public int getAnioEstreno() {
