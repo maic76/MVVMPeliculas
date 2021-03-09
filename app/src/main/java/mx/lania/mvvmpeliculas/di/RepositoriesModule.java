@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import mx.lania.mvvmpeliculas.MVVMPeliculas;
+import mx.lania.mvvmpeliculas.repository.ActorRepository;
 import mx.lania.mvvmpeliculas.repository.GeneroRepository;
 import mx.lania.mvvmpeliculas.repository.PeliculaRepository;
 import mx.lania.mvvmpeliculas.viewModel.GeneroViewModelFactory;
@@ -30,6 +31,13 @@ public class RepositoriesModule {
     @Provides
     @Singleton
     GeneroRepository provideGeneroRepository(GeneroRepository repository){
+        return repository;
+    }
+
+
+    @Provides
+    @Singleton
+    ActorRepository provideActorRepository(ActorRepository repository){
         return repository;
     }
 

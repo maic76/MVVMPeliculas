@@ -4,6 +4,8 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.ArrayList;
+
 @Entity(tableName = "TablePelicula")
 public class TablePelicula {
     @PrimaryKey( autoGenerate = true)
