@@ -9,6 +9,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import mx.lania.mvvmpeliculas.roomDB.AppDatabase;
+import mx.lania.mvvmpeliculas.roomDB.DAOs.DAOActor;
 import mx.lania.mvvmpeliculas.roomDB.DAOs.DAOGenero;
 import mx.lania.mvvmpeliculas.roomDB.DAOs.DAOPelicula;
 
@@ -35,4 +36,8 @@ public class RoomModule {
     @Provides
     @Singleton
     DAOGenero provideGenero(AppDatabase appDatabase){return appDatabase.getDAOGenero();}
+
+    @Provides
+    @Singleton
+    DAOActor provideActor(AppDatabase appDatabase){return appDatabase.getDAOActor();}
 }
