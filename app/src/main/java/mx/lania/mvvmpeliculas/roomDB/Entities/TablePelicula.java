@@ -2,6 +2,7 @@ package mx.lania.mvvmpeliculas.roomDB.Entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "TablePelicula")
@@ -18,6 +19,29 @@ public class TablePelicula {
 
     @ColumnInfo(name="idGenero")
     private int idGenero;
+
+    @ColumnInfo(name="portada")
+    private String portada;
+
+    public String getPortada() {
+        return portada;
+    }
+
+    public void setPortada(String portada) {
+        this.portada = portada;
+    }
+
+    public TablePelicula(){
+    }
+
+    @Ignore
+    public TablePelicula(int idPelicula, String tituloPelicula, int anioEstreno, int idGenero, String portada) {
+        this.idPelicula = idPelicula;
+        this.tituloPelicula = tituloPelicula;
+        this.anioEstreno = anioEstreno;
+        this.idGenero = idGenero;
+        this.portada = portada;
+    }
 
     public int getIdPelicula() {
         return idPelicula;

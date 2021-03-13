@@ -10,6 +10,7 @@ import dagger.Provides;
 import mx.lania.mvvmpeliculas.MVVMPeliculas;
 import mx.lania.mvvmpeliculas.repository.GeneroRepository;
 import mx.lania.mvvmpeliculas.repository.PeliculaRepository;
+import mx.lania.mvvmpeliculas.repository.PeliculaRepositoryImpl;
 import mx.lania.mvvmpeliculas.viewModel.GeneroViewModelFactory;
 import mx.lania.mvvmpeliculas.viewModel.PeliculaViewModelFactory;
 
@@ -23,8 +24,8 @@ public class RepositoriesModule {
 
     @Provides
     @Singleton
-    PeliculaRepository providePeliculaRepository(PeliculaRepository repository){
-        return repository;
+    PeliculaRepository providePeliculaRepository(PeliculaRepositoryImpl repositoryImpl){
+        return repositoryImpl;
     }
 
     @Provides
