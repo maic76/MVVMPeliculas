@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
+import mx.lania.mvvmpeliculas.remote.models.PeliculaResponse;
 import mx.lania.mvvmpeliculas.roomDB.Entities.TablePelicula;
 
 public interface PeliculaRepository {
@@ -17,4 +18,8 @@ public interface PeliculaRepository {
     LiveData<List<TablePelicula>> getPeliculasLocales();
 
     LiveData<List<TablePelicula>> getAll();
+
+    //----------------- REMOTAS -------------------//
+
+    LiveData<List<PeliculaResponse>> getPeliculas();
 }
