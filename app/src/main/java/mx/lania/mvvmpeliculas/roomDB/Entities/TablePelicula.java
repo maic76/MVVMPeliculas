@@ -10,7 +10,7 @@ import java.util.ArrayList;
 @Entity(tableName = "TablePelicula")
 public class TablePelicula {
     @PrimaryKey( autoGenerate = true)
-    @ColumnInfo(name = "idPelicula")
+    @ColumnInfo(name = "id")
     private int idPelicula;
 
     @ColumnInfo( name ="tituloPelicula")
@@ -19,30 +19,30 @@ public class TablePelicula {
     @ColumnInfo(name="anioEstreno")
     private int anioEstreno;
 
-    @ColumnInfo(name="idGenero")
-    private int idGenero;
+   /* @ColumnInfo(name="idGenero")
+    private int idGenero;*/
 
-    @ColumnInfo(name="portada")
-    private String portada;
+    @ColumnInfo(name="poster")
+    private String poster;
 
-    public String getPortada() {
-        return portada;
+    public String getPoster() {
+        return poster;
     }
 
-    public void setPortada(String portada) {
-        this.portada = portada;
+    public void setPoster(String poster) {
+        this.poster = poster;
     }
 
     public TablePelicula(){
     }
 
     @Ignore
-    public TablePelicula(int idPelicula, String tituloPelicula, int anioEstreno, int idGenero, String portada) {
+    public TablePelicula(int idPelicula, String tituloPelicula, int anioEstreno, int idGenero, String poster) {
         this.idPelicula = idPelicula;
         this.tituloPelicula = tituloPelicula;
         this.anioEstreno = anioEstreno;
-        this.idGenero = idGenero;
-        this.portada = portada;
+      /*  this.idGenero = idGenero;*/
+        this.poster = poster;
     }
 
     public int getIdPelicula() {
@@ -61,13 +61,13 @@ public class TablePelicula {
         this.tituloPelicula = tituloPelicula;
     }
 
-    public int getIdGenero() {
+  /*  public int getIdGenero() {
         return idGenero;
     }
 
     public void setIdGenero(int idGenero) {
         this.idGenero = idGenero;
-    }
+    }*/
 
     public int getAnioEstreno() {
         return anioEstreno;

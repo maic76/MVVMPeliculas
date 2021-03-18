@@ -1,7 +1,10 @@
 package mx.lania.mvvmpeliculas.viewModel;
 
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -20,6 +23,22 @@ public class PeliculaViewModel extends ViewModel {
         Executor myExecutor = Executors.newSingleThreadExecutor();
         myExecutor.execute(() -> peliculaRepository.insertarPelicula(nuevaPelicula));
     }
+
+    public int getPeliculaById(int idPelicula){
+        return peliculaRepository.getPeliculaById(idPelicula);
+    }
+
+    public void actualizarPelicula(TablePelicula actualizaPelicula){
+        peliculaRepository.actualizarPelicula(actualizaPelicula);
+    }
+
+    public LiveData<List<TablePelicula>> getPeliculasLocales(){
+        MediatorLiveData<List<TablePelicula>> getPeliculaLocal = new MediatorLiveData<>();
+        getPeliculaLocal.addSource(peliculaRepository.getPeliculasLocales(),pelicula->getPeliculaLocal.setValue(pelicula));
+        return getPeliculaLocal;
+    }
+
+
 
 
 

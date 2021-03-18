@@ -4,7 +4,8 @@ import dagger.Component;
 
 @Component( modules = {
         RepositoriesModule.class,
-        RoomModule.class
+        RoomModule.class,
+        RemoteModule.class
 })
 public interface AppComponent {
     //Application application();

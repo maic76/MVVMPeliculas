@@ -10,5 +10,11 @@ public interface PeliculaRepository {
 
     void insertarPelicula(TablePelicula nuevaPelicula);
 
+    int getPeliculaById(int idPelicula);
+
+    void actualizarPelicula(TablePelicula actualizaPelicula);
+
+    LiveData<List<TablePelicula>> getPeliculasLocales();
+
     LiveData<List<TablePelicula>> getAll();
 }
