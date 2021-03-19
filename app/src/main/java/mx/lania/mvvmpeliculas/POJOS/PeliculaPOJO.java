@@ -1,21 +1,20 @@
-package mx.lania.mvvmpeliculas.remote.models;
+package mx.lania.mvvmpeliculas.POJOS;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-public class PeliculaResponse {
-    @SerializedName("id")
-    @Expose
+public class PeliculaPOJO {
     private Integer id;
-    @SerializedName("tituloPelicula")
-    @Expose
-    private String tituloPelicula;
-    @SerializedName("anioEstreno")
-    @Expose
-    private Integer anioEstreno;
-    @SerializedName("poster")
-    @Expose
-    private String poster;
+private String tituloPelicula;
+private Integer anioEstreno;
+private String poster;
+
+public PeliculaPOJO(){
+
+}
+    public PeliculaPOJO(Integer id, String tituloPelicula, Integer anioEstreno, String poster) {
+        this.id = id;
+        this.tituloPelicula = tituloPelicula;
+        this.anioEstreno = anioEstreno;
+        this.poster = poster;
+    }
 
     public Integer getId() {
         return id;
@@ -48,5 +47,4 @@ public class PeliculaResponse {
     public void setPoster(String poster) {
         this.poster = poster;
     }
-
 }

@@ -37,7 +37,7 @@ public class TablePelicula {
     }
 
     @Ignore
-    public TablePelicula(int idPelicula, String tituloPelicula, int anioEstreno, int idGenero, String poster) {
+    public TablePelicula(int idPelicula, String tituloPelicula, int anioEstreno,  String poster) {
         this.idPelicula = idPelicula;
         this.tituloPelicula = tituloPelicula;
         this.anioEstreno = anioEstreno;

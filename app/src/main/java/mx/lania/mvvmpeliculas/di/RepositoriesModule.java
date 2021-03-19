@@ -29,7 +29,7 @@ public class RepositoriesModule {
         return repositoryImpl;
     }
 
-    @Provides
+  /*  @Provides
     @Singleton
     GeneroRepository provideGeneroRepository(GeneroRepository repository){
         return repository;
@@ -40,7 +40,7 @@ public class RepositoriesModule {
     @Singleton
     ActorRepository provideActorRepository(ActorRepository repository){
         return repository;
-    }
+    }*/
 
     @Provides
     @Singleton
@@ -49,11 +49,11 @@ public class RepositoriesModule {
         return new PeliculaViewModelFactory(repository);
     }
 
-    @Provides
+   /* @Provides
     @Singleton
     @Named("GeneroFactory")
     ViewModelProvider.Factory provideGeneroViewModelFactory(GeneroRepository repository){
         return new GeneroViewModelFactory(repository);
-    }
+    }*/
 
 }

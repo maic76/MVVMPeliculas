@@ -21,6 +21,11 @@ allprojects {
     repositories {
         google()
         jcenter()
+
+
+        // repositorios extras de dependencias
+        maven { url 'https://maven.google.com' }
+        maven { url 'https://jitpack.io' }
     }
 }
 

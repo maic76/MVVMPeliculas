@@ -33,11 +33,11 @@ public class RoomModule {
     @Singleton
     DAOPelicula providePelicula(AppDatabase appDatabase){return appDatabase.getDAOPelicula();}
 
-    @Provides
+   /* @Provides
     @Singleton
     DAOGenero provideGenero(AppDatabase appDatabase){return appDatabase.getDAOGenero();}
 
     @Provides
     @Singleton
-    DAOActor provideActor(AppDatabase appDatabase){return appDatabase.getDAOActor();}
+    DAOActor provideActor(AppDatabase appDatabase){return appDatabase.getDAOActor();}*/
 }

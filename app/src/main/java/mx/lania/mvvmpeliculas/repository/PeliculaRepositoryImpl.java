@@ -75,7 +75,7 @@ public class PeliculaRepositoryImpl implements PeliculaRepository {
                 PeliculaResponse peliculaFallida = new PeliculaResponse();
                 peliculaFallida.setId(0);
                 peliculaFallida.setTituloPelicula("NO HUBO RESPUESTA");
-                peliculaFallida.setAnioEstreno("NO HUBO RESPUESTA");
+                peliculaFallida.setAnioEstreno(0);
                 peliculaFallida.setPoster("NO HUBO RESPUESTA");
                 listaDeUno.add(peliculaFallida);
                 liveData.setValue(listaDeUno);
