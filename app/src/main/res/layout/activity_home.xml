@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".UI.ActivityHome">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -12,6 +13,7 @@
         android:layout_height="104dp"
         android:elevation="10dp"
         android:fitsSystemWindows="true"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/viewPagerPelicula"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,13 +26,13 @@
             android:background="@color/colorAccent"
             app:tabGravity="fill"
 
-            app:tabIndicatorColor="@android:color/holo_green_light"
+            app:tabIndicatorColor="@color/colorPrimary"
             app:tabIndicatorHeight="6dp"
             app:tabInlineLabel="true"
             app:tabMode="fixed"
             app:tabRippleColor="@color/colorPrimaryDark"
-            app:tabSelectedTextColor="@color/primary_light"
-            app:tabTextColor="@android:color/darker_gray" />
+            app:tabSelectedTextColor="@color/primary_text"
+            app:tabTextColor="@color/colorPrimaryDark" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
