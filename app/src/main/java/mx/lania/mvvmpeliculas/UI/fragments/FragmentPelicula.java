@@ -1,5 +1,6 @@
 package mx.lania.mvvmpeliculas.UI.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +27,9 @@ import mx.lania.mvvmpeliculas.POJOS.PeliculaPOJO;
 import mx.lania.mvvmpeliculas.R;
 import mx.lania.mvvmpeliculas.UI.adapters.AdapterRecyclerView;
 import mx.lania.mvvmpeliculas.roomDB.Entities.TablePelicula;
+import mx.lania.mvvmpeliculas.services.ProgressIntentService;
 import mx.lania.mvvmpeliculas.utils.CheckConnection;
+import mx.lania.mvvmpeliculas.utils.Constants;
 import mx.lania.mvvmpeliculas.viewModel.PeliculaViewModel;
 import es.dmoral.toasty.Toasty;
 
@@ -94,6 +97,14 @@ public class FragmentPelicula extends Fragment implements SwipeRefreshLayout.OnR
                 srPelicula.setRefreshing(false);
                 srPelicula.setVisibility(View.VISIBLE);
                 pbPeliculas.setVisibility(View.GONE);
+                //Iniciamos el servicio
+                Intent intent = new Intent(getActivity(), ProgressIntentService.class);
+                intent.setAction(Constants.ACTION_RUN_ISERVICE);
+                Bundle extras = new Bundle();
+                extras.putInt("totalPeliculas",apiPeliculasResponse.size());
+                intent.putExtras(extras);
+                getActivity().startService(intent);
+
                 for (int i = 0; i < apiPeliculasResponse.size(); i++) {
                     int idPelicula = apiPeliculasResponse.get(i).getId();
                     String tituloPelicula = apiPeliculasResponse.get(i).getTituloPelicula();
