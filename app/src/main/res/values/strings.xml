@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MVVMPeliculas</string>
+    <string name="longitude_label">Longitud</string>
+    <string name="latitude_label">Latitud</string>
 </resources>

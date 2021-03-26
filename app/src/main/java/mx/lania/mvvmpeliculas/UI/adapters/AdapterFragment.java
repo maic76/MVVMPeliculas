@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import mx.lania.mvvmpeliculas.UI.fragments.FragmentPelicula;
+import mx.lania.mvvmpeliculas.UI.fragments.FragmentUbicacion;
 
 public class AdapterFragment extends FragmentPagerAdapter {
     private int numberOfTabs;
@@ -19,6 +20,8 @@ public class AdapterFragment extends FragmentPagerAdapter {
         switch (position) {
             case 0:
                 return new FragmentPelicula();
+            case 1:
+                return new FragmentUbicacion();
             default:
                 return null;
         }

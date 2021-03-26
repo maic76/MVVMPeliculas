@@ -40,7 +40,7 @@ public class ProgressIntentService extends IntentService {
     // Se construye la notificación
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void notificacion(int incremento, int max) {
-        String NOTIFICATION_CHANNEL_ID = " mx.lania.mvvmpeliculas";
+        String NOTIFICATION_CHANNEL_ID = "mx.lania.mvvmpeliculas";
         String channelName = "Notificacion Peliculas";
 
         NotificationChannel chan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName, NotificationManager.IMPORTANCE_NONE);

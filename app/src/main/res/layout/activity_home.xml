@@ -19,6 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayoutPelicula"
             android:layout_width="match_parent"
@@ -33,6 +34,18 @@
             app:tabRippleColor="@color/colorPrimaryDark"
             app:tabSelectedTextColor="@color/primary_text"
             app:tabTextColor="@color/colorPrimaryDark" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_light">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aqui pondría la ubicacion del vato "
+                android:layout_marginTop="5dp"
+                android:textColor="@color/primary_text"/>
+        </LinearLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager

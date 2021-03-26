@@ -30,6 +30,7 @@ public class ActivityHome extends AppCompatActivity {
         ButterKnife.bind(this);
 
         tabLayoutPelicula.addTab(tabLayoutPelicula.newTab().setText("Peliculas")); //titulo pestaña
+        tabLayoutPelicula.addTab(tabLayoutPelicula.newTab().setText("Ubicación")); //titulo pestaña
         tabLayoutPelicula.setTabGravity(TabLayout.GRAVITY_FILL); //esto es para colorear la pestaña activa}
 
         // adapter fragment
@@ -47,7 +48,7 @@ public class ActivityHome extends AppCompatActivity {
                         getSupportActionBar().setTitle("PELICULA");
                         break;
                     case 1:
-                        //getSupportActionBar().setTitle("otro Objeto");
+                        getSupportActionBar().setTitle("UBICACION");
                         break;
                 }
             }
