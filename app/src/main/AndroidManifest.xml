@@ -17,20 +17,45 @@
         android:theme="@style/MyTheme"
         android:name=".MVVMPeliculas">
 
+        <!--<activity android:name=".UI.PushNotificationsActivity"/>-->
 
-        <activity android:name=".UI.ActivityHome">
-
-            <!-- Agregados intent filters -->
+        <activity android:name=".UI.LoginActivity">
+            <!--    <activity android:name=".UI.ActivityHome">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".UI.ActivityHome">
+
+            <!-- Agregados intent filters -->
+            <intent-filter>
+                <action android:name="android.usingintent.UI.ActivityHome" />
+                <category android:name="android.intent.category.DEFAULT" />
+             <!--   <action android:name="android.intent.action.VIEW" />-->
+            </intent-filter>
+        </activity>
+
         <service
             android:name=".services.ProgressIntentService"
             android:exported="false" >
         </service>
+
+        <!-- Firebase -->
+        <service android:name=".services.IFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".services.IFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- Firebase -->
 
     </application>
 

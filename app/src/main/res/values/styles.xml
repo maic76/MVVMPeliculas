@@ -14,4 +14,13 @@
         <item name="colorPrimaryDark">@android:color/primary_text_light</item>
         <item name="colorAccent">#448AFF</item>
     </style>
+    <style name="LoginEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@android:color/white</item>
+        <item name="android:editTextColor">@android:color/white</item>
+    </style>
+    <style name="AppTheme.AccentButton">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 </resources>
