@@ -73,4 +73,14 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:18.0.0'
     //Imagen redonda
     implementation 'de.hdodenhof:circleimageview:2.1.0'
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:26.8.0')
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+    //Servicio de autenticacion Firebase
+    implementation 'com.google.firebase:firebase-auth:20.0.3'
+    //Mensajes Firebase
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
 }
+apply plugin: 'com.google.gms.google-services'

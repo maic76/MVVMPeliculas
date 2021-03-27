@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "890609522097",
+    "project_id": "mvvmpeliculas",
+    "storage_bucket": "mvvmpeliculas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890609522097:android:a971a90ff448a3fd2e5990",
+        "android_client_info": {
+          "package_name": "mx.lania.mvvmpeliculas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890609522097-hofbpjah8nhnr0c82jct8kmauujh1oh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCocqisKhH1AF2WlQsScVglkmONdx8hRRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890609522097-hofbpjah8nhnr0c82jct8kmauujh1oh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
