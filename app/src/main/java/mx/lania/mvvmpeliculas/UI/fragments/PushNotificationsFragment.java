@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.messaging.FirebaseMessaging;
+
 import  mx.lania.mvvmpeliculas.POJOS.PushNotification;
 import  mx.lania.mvvmpeliculas.R;
 import  mx.lania.mvvmpeliculas.UI.adapters.PushNotificationsAdapter;
@@ -35,6 +37,8 @@ public class PushNotificationsFragment extends Fragment implements PushNotificat
 
 
     public PushNotificationsFragment() {
+       mPresenter = new PushNotificationsPresenter(
+                this, FirebaseMessaging.getInstance());
     }
 
     public static PushNotificationsFragment newInstance() {

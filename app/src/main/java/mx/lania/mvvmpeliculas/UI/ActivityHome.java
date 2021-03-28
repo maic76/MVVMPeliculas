@@ -1,11 +1,13 @@
 package mx.lania.mvvmpeliculas.UI;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,8 +31,16 @@ public class ActivityHome extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
 
+        // ¿Existe un usuario logueado?
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+        }
+
+
         tabLayoutPelicula.addTab(tabLayoutPelicula.newTab().setText("Peliculas")); //titulo pestaña
         tabLayoutPelicula.addTab(tabLayoutPelicula.newTab().setText("Ubicación")); //titulo pestaña
+        tabLayoutPelicula.addTab(tabLayoutPelicula.newTab().setText("Notificaciones")); //titulo pestaña
         tabLayoutPelicula.setTabGravity(TabLayout.GRAVITY_FILL); //esto es para colorear la pestaña activa}
 
         // adapter fragment
@@ -49,6 +59,9 @@ public class ActivityHome extends AppCompatActivity {
                         break;
                     case 1:
                         getSupportActionBar().setTitle("UBICACION");
+                        break;
+                    case 2:
+                        getSupportActionBar().setTitle("NOTIFICACIONES");
                         break;
                 }
             }
