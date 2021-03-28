@@ -34,8 +34,8 @@ public class PushNotificationsAdapter extends RecyclerView.Adapter<PushNotificat
 
         holder.title.setText(newNotification.getTitle());
         holder.description.setText(newNotification.getDescription());
-        holder.expiryDate.setText(String.format("Válido hasta el %s", newNotification.getExpiryDate()));
-        holder.discount.setText(String.format("%d%%", (int) (newNotification.getDiscount() * 100)));
+      /*  holder.expiryDate.setText(String.format("Válido hasta el %s", newNotification.getExpiryDate()));
+        holder.discount.setText(String.format("%d%%", (int) (newNotification.getDiscount() * 100)));*/
     }
 
     @Override
@@ -67,8 +67,8 @@ public class PushNotificationsAdapter extends RecyclerView.Adapter<PushNotificat
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.tv_title);
             description = (TextView) itemView.findViewById(R.id.tv_description);
-            expiryDate = (TextView) itemView.findViewById(R.id.tv_expiry_date);
-            discount = (TextView) itemView.findViewById(R.id.tv_discount);
+         /*   expiryDate = (TextView) itemView.findViewById(R.id.tv_expiry_date);
+            discount = (TextView) itemView.findViewById(R.id.tv_discount);*/
         }
     }
 }

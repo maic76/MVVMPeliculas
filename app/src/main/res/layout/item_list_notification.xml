@@ -24,9 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:text="New Text"
+            android:text="Premier"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            tools:text="50%" />
+            tools:text="Premier" />
 
         <TextView
             android:id="@+id/tv_title"
@@ -37,7 +37,7 @@
             android:layout_toRightOf="@+id/tv_discount"
             android:text="New Text"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            tools:text="¡Cyberlunes!" />
+            tools:text="¡Estreno de Película!" />
 
         <TextView
             android:id="@+id/tv_description"
@@ -46,8 +46,8 @@
             android:layout_below="@+id/tv_title"
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@+id/tv_discount"
-            android:text="New Text"
-            tools:text="Compra en línea ahora mismo y ahorra hasta un 50% en el seguro de tu automóvil" />
+            android:text="Descripcion"
+            tools:text="" />
 
         <TextView
             android:id="@+id/tv_expiry_date"
@@ -57,10 +57,10 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_toRightOf="@+id/tv_discount"
-            android:text="New Text"
+            android:text="Premier de película!"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textStyle="italic"
-            tools:text="Valido hasta el 7/07/2016" />
+            tools:text="Premier de película!" />
 
         <Button
             android:id="@+id/button"
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_expiry_date"
             android:layout_toRightOf="@+id/tv_discount"
-            android:text="REDIMIR"
+            android:text="OK"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="?attr/colorPrimary"
             android:textSize="13sp" />
