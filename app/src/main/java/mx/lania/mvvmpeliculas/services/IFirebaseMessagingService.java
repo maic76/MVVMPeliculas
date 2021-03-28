@@ -14,18 +14,24 @@ import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+
+import butterknife.BindView;
 import mx.lania.mvvmpeliculas.R;
 //import mx.lania.mvvmpeliculas.UI.PushNotificationsActivity;
+import mx.lania.mvvmpeliculas.UI.ActivityHome;
 import mx.lania.mvvmpeliculas.UI.fragments.PushNotificationsFragment;
 
 import java.util.Map;
 
 public class IFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = IFirebaseMessagingService.class.getSimpleName();
+
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -47,11 +53,13 @@ public class IFirebaseMessagingService extends FirebaseMessagingService {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void displayNotification(RemoteMessage.Notification notification, Map<String, String> data) {
-      /*  Intent intent = new Intent(this, PushNotificationsActivity.class);
+        Intent intent = new Intent(this, ActivityHome.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("setNotificationTab","setNotificationTab");
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
                 PendingIntent.FLAG_ONE_SHOT);
-*/
+
+
         String NOTIFICATION_CHANNEL_ID = "mx.lania.mvvmpeliculas.firebase";
         String channelName = "Mi notificacion Firebase";
 
@@ -71,8 +79,8 @@ public class IFirebaseMessagingService extends FirebaseMessagingService {
                 .setContentText(notification.getBody())
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
-                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
-               // .setContentIntent(pendingIntent);
+                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                .setContentIntent(pendingIntent);
 
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);

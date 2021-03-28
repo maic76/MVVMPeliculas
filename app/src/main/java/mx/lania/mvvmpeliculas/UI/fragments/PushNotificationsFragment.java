@@ -37,12 +37,12 @@ public class PushNotificationsFragment extends Fragment implements PushNotificat
 
 
     public PushNotificationsFragment() {
-       mPresenter = new PushNotificationsPresenter(
-                this, FirebaseMessaging.getInstance());
+
     }
 
     public static PushNotificationsFragment newInstance() {
         PushNotificationsFragment fragment = new PushNotificationsFragment();
+
         // Setup de Argumentos
         return fragment;
     }
@@ -53,6 +53,8 @@ public class PushNotificationsFragment extends Fragment implements PushNotificat
         if (getArguments() != null) {
             // Gets de argumentos
         }
+        mPresenter = new PushNotificationsPresenter(
+                this, FirebaseMessaging.getInstance());
 
         mNotificationsReceiver = new BroadcastReceiver() {
             @Override

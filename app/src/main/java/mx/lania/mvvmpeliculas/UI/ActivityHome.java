@@ -2,6 +2,7 @@ package mx.lania.mvvmpeliculas.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -30,6 +31,8 @@ public class ActivityHome extends AppCompatActivity {
 
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
+
+
 
         // ¿Existe un usuario logueado?
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {
@@ -74,6 +77,37 @@ public class ActivityHome extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+
+        if(savedInstanceState == null)
+        {
+            Bundle extras = getIntent().getExtras();
+            if (extras == null)
+            {
+                //Extra bundle is null
+            }else{
+                String method = extras.getString("setNotificationTab");
+
+                if (method.equals("setNotificationTab"))
+                {
+                    setNotificationTab();
+                }
+            }
+        }
+
+
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        if(intent.getStringExtra("setNotificationTab").equals("setNotificationTab")){
+            setNotificationTab();
+        }
+    }
+
+    public void setNotificationTab(){
+        Log.d("SETTAB", "¡TRATO DE SETEAR EL TAB!");
+        viewPagerPelicula.setCurrentItem(2);
     }
 
 }
